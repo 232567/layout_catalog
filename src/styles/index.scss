@@ -26,7 +26,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
-
   list-style: none;
 }
 
@@ -65,12 +64,12 @@ body {
 .catalog {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 40px;
+  padding: 40px; /* Ajustado para o baseline */
 }
 
 .catalog__grid {
   display: grid;
-  justify-content: center;
+  justify-content: start; /* Corrigido: alinhamento à esquerda */
 
   grid-template-columns: repeat(1, 200px);
   gap: 46px 48px;
@@ -99,12 +98,11 @@ body {
 
   text-align: center;
 
-  transition: transform 300ms;
+  transition: box-shadow 300ms; /* Corrigido: sem scale */
 }
 
 .card:hover {
-  transform: scale(1.2);
-  z-index: 2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .card__image {
